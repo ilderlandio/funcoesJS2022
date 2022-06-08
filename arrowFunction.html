@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Arrow Fuction | Função de seta </title>
+</head>
+<body>
+  <script> 
+    // função clássica
+   	function calDobro(a){
+       return `Func Clássica: ${2 * a}`; 
+   	}
+   	console.log(calDobro(5));
+	// Função anônima, é atribuída a uma variável
+   	   let dobro = function(a){
+   	   	   return `Func anônima: ${2 * a}`;
+   	   	   }
+   	 console.log(dobro(3));
+	// arrow, sempre é uma função anônima
+	// se usar o {}, então só retorna valor usando o return
+	let mult2 = (a) => { 
+		return "Func arrow:"+ 2 * a; 
+	}
+	console.log(mult2(4));
+
+ // se for um parâmetro, não é obrigado {} e o retorno automático 
+	mult2 = a => `Func arrow: ${2 * a}`;
+
+	console.log(mult2(6)); 
+
+// com mais de um parâmetro
+    let media = (n1,n2) => {
+    	return `Média: ${(n1+n2)/2}`;
+    }
+   console.log(media(9,8));
+
+ // se a função não tiver parâmetros, os () é obrigatório
+   let semParam = () => {
+  	  return "Olá!";
+  } 
+  console.log(semParam());
+
+ </script>
+</body>
+</html>

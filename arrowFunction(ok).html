@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title> Arrow Function </title>
+</head>
+<body>
+   <script>
+   	// função clássica
+   	function calDobro(a){
+       return 2 * a; 
+   	}
+   	console.log(calDobro(5)); 
+
+   	// Função anônima, e atribuída a uma variável
+   	   let dobro = function(a){
+   	   	   return 2 * a;
+   	   	   }
+   	   	console.log(dobro(2));
+   	 
+   	 // arrow, sempre é uma função anônima
+    	 dobro = (a) => { // se usar o {}, então só retorna valor usando o return
+   	 	return 2 * a; 
+   	 }
+   	 console.log(dobro(3)); 
+   	 
+   	 // com dois ou mais parâmetros
+   	 let media = (n1,n2) => {
+   	 	return (n1 + n2) / 2; 
+   	 }
+   	 console.log(media(6,8));
+
+   // arrow, pode ser reduzida, se tiver só um parâmetro, o retorno é automático e não precisa dos ()
+   dobro = a => 2 * a; 
+   console.log(dobro(6));
+
+   // Sem parâmetros, usa os () mesmo assim
+   let teste = function(){
+   	return "Olá!";
+   }
+  
+   teste = () => "Olá!"; 
+
+   console.log(teste());
+
+   </script>
+</body>
+</html>

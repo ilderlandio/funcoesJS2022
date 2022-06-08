@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Funções Parâmetro e Retorno </title>
+</head>
+<body>
+   <script> 
+    function calMedia(n1,n2,n3){
+          let media = (n1+n2+n3)/3;
+          return media; // retornar valor é opcional
+          // return media.toFixed(2);  
+    }
+// chamo pelo nome da função e passo os parâmetros
+   console.log(calMedia(9,6,5));
+
+   /* Função com parâmetros padrões ou inicializados */
+   function calArea(larg=6,comp=25){
+   	  let area = larg * comp;
+   	  return area;
+   	  // return "Àrea:"+area; 
+   }
+ console.log(calArea());
+ console.log(calArea(10,35));
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title> This em JavaScript </title>
+</head>
+<body style="height: 100px; width: 100%; background-color: blue">
+   <h1> Contexto do corpo do documento </h1>
+</body>
+</html>
+<script>
+  	function f1(){
+     console.log(this === window);
+     	}
+  	f1();
+
+  	
+     // no javascript o this pode variar, ele pode apontar para outra coisa, dependo do contexto. 
+     document.getElementsByTagName('body')[0].onclick = f1; 
+
+     // na versão 6 do JS eles criaram uma função que corrige isso
+     // função de seta(arrow)
+
+     const f3 = () => console.log(this === window);
+     f3(); // deve mostrar true
+
+     document.getElementsByTagName('body')[0].onclick = f3;
+     // agora sim, deve mostrar true também
+     // o this foi forçado pela função arrow a não varias, o que é o correto.
+  </script>

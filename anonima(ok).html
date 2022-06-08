@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title> Java Script </title>
+</head>
+<body>
+	<script>
+		const soma = function(x,y){
+			return x + y; 
+		} 
+		const mostrarResult = function(a,b,operacao = soma){
+			console.log(operacao(a,b));
+		}
+		mostrarResult(3,5);
+		// outra forma
+		mostrarResult(5,6,soma);
+		// Outra, nesse caso estou trocando soma por outra função
+		mostrarResult(3,8, function(x,y){return x - y});
+
+		// Usando arrow function
+		mostrarResult(3,8, (x,y) => x * y);
+	</script>
+
+</body>
+</html>
